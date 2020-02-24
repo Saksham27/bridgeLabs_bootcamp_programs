@@ -1,5 +1,5 @@
 
-// Fibonacci series up to n
+// Factorial of a number
 
 import java.util.*; 
 public class Factorial_recursion {
