@@ -1,0 +1,46 @@
+// Binary to octal conversion
+
+import java.util.*; 
+public class BinaryToOctal {
+	
+	int raiseToPower(int num,int power) {
+		if(power==0){
+			return 1;
+		}
+		int result=1;
+		for(int i=1;i<=power;i++) {
+			result *= num; 
+		}
+		return result;
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	    int num,temp,octal=0,inputChunk,octalCounter=1;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the First number : ");
+		num = sc.nextInt();
+		
+		
+		temp=num;
+		
+		while(temp!=0){
+			int powerCounter = 0,outputChunk=0;
+			inputChunk = temp % 1000;
+			
+			while(inputChunk != 0){	
+				outputChunk += new BinaryToOctal().raiseToPower(2,powerCounter)*(inputChunk % 10);
+				powerCounter++;
+				inputChunk /= 10;
+			}
+					
+			temp /= 1000;
+			octal = octal + outputChunk*octalCounter;
+			
+			octalCounter *=10;
+		}
+		
+		System.out.println("Octal of " + num + " is " + octal);
+	}
+	
+}
