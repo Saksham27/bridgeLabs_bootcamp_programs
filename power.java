@@ -5,6 +5,9 @@ import java.util.*;
 public class RaiseToPower {
 	
 	int raiseToPower(int num,int power) {
+		if(power==0){
+			return 1;
+		}
 		int result=1;
 		for(int i=1;i<=power;i++) {
 			result *= num; 
