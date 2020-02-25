@@ -16,7 +16,7 @@ public class Array {
 		}
 	}
 	
-	static int scalerProduct(int[] a,int[] b,int size) {
+	static int minimumScalerProduct(int[] a,int[] b,int size) {
 		int sum=0;
 		for(int i=0;i<size;i++){
 			sum += a[i]*b[size-i-1];
@@ -50,7 +50,7 @@ public class Array {
 			sort(a,size);
 			sort(b,size);
 			
-			System.out.println("Scaler Product : "+ scalerProduct(a,b,size));
+			System.out.println("Minumum Scaler Product : "+ minimumScalerProduct(a,b,size));
 			
 				
 		}
