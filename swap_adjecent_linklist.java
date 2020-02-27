@@ -1,4 +1,4 @@
-public class LinkedList {
+public class SwapAdjecent {
 	Node head;
 	Node tail;
 	
@@ -12,7 +12,7 @@ public class LinkedList {
 		}
 	}
 	 	
-	LinkedList(int val){
+	SwapAdjecent(int val){
 		Node n = new Node(val);
 		head = n;
 		tail = n;
@@ -20,10 +20,11 @@ public class LinkedList {
 	
 	
 	
-	void append(int val){
+	int append(int val){
 		Node n = new Node(val);
 		tail.next = n;
 		tail = n;
+		return 0;
 	}
 	 
 	int swap(Node n){
@@ -41,7 +42,7 @@ public class LinkedList {
 		}
 		}
 		return 0;
-	};
+	}
 	
 	
 	int printLinkedList(){
@@ -59,7 +60,7 @@ public class LinkedList {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LinkedList l = new LinkedList(2);
+		SwapAdjecent l = new SwapAdjecent(2);
 		l.append(4);
 		l.append(7);
 		l.append(5);
