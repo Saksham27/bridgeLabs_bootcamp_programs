@@ -13,7 +13,7 @@ public class GamblerGame {
 				stake=stake-1;
 				loss++;
 				
-			}else{
+			}else{ // win condition
 				stake+=2;
 				win++;
 			}
@@ -21,13 +21,13 @@ public class GamblerGame {
 			
 		}
 		if(counter==0){
-			System.out.println("Sorry !!! you have already played "+times+" times. \nYou Won : "+win+" \n You loss : "+loss+" \nYou win precentage : "+(float)win/(times-counter)*100);
+			System.out.println("Sorry !!! you have already played "+times+" times.\n Stackes :"+stake+" \nYou Won : "+win+" \n You loss : "+loss+" \nYou win precentage : "+(float)win/(times-counter)*100);
 			return 0;
 		}else if(stake==0){
-			System.out.println("Sorry !!! your money is over. \nYou Won : "+win+" \n You loss : "+loss+" \nYou played "+(times-counter)+" times. \nYou win precentage : "+(float)win/(times-counter)*100);
+			System.out.println("Sorry !!! your money is over.\n Stackes :"+stake+" \nYou Won : "+win+" \n You loss : "+loss+" \nYou played "+(times-counter)+" times. \nYou win precentage : "+(float)win/(times-counter)*100);
 			return 0;
 		}
-			System.out.println("Congrats !!! you have reached your assumed goal. \nYou Won : "+win+" \n You loss : "+loss+" \nYou played "+(times-counter)+" times. \nYou win precentage : "+(float)win/(times-counter)*100);
+			System.out.println("Congrats !!! you have reached your assumed goal.\n Stackes :"+stake+" \nYou Won : "+win+" \n You loss : "+loss+" \nYou played "+(times-counter)+" times. \nYou win precentage : "+(float)win/(times-counter)*100);
 			return 0;	
 	}
 	public static void main(String[] args) {
